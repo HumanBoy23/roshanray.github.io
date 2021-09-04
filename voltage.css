@@ -1,0 +1,31 @@
+/* styling for voltage drop page */
+#voltagedrop_header {
+    text-align: center;
+}
+.calculate_btn{
+    font-size: 15px;
+    width: 80px;
+    height: 25px;
+    margin: 0;
+    border-width: 2px;
+    margin-right: 5px;
+}
+.btn_reset {
+    font-size: 15px;
+    width: 60px;
+    height: 25px;
+    margin: 0;
+    border-width: 2px;
+    margin-left: 15px;
+}
+button {
+    user-select: none;
+    border-radius: 5px;
+}
+button:active {
+    background-color: grey;
+    transition: ease-in-out -3s;
+}
+h4{
+    user-select: none;
+}

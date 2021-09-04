@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltage Drop Calculator</title>
+    <link rel="stylesheet" href="voltage.css">
+</head>
+<body>
+    <h1 id="voltagedrop_header">Voltage Drop Calculator with Resitor</h1>
+    <main>
+        <div class="container">
+            <table>
+                <h4>Voltage: <input id="voltage" type="text" name="voltage" placeholder="Voltage"></h4>
+                <h4>Resistor: <input id="resistor" type="text" name="resistor" placeholder="Resitor Value"></h4>
+                <h4>Current: <input id="current" type="text" name="current" placeholder="Current/Amps"></h4>
+                <button class="calculate_btn">Calculate</button>
+                <button class="btn_reset">Reset</button>
+                <h4>Voltage Drop: <input id="result" disabled type="text" name="result" placeholder=""></h4>
+                <h4>Voltage through the resistor: <input id="voltage_through_resistor" type="text" disabled name="voltage_through_resistor" placeholder=""></h4>
+            </table>
+        </div>
+    </main>
+</body>
+<script src="voltage.js"></script>
+</html>

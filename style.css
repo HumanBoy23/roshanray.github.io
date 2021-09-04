@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    user-select: none;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+.main_header {
+    text-align: center;
+}
+.calculator_body{
+    display: block;
+    height: 370px;
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: rgb(223, 134, 223);
+}
+#screen {
+    text-align: right;
+    font-size: 22px;
+    /* padding-right: 100px; */
+    margin-top: 15px;
+    /* padding-bottom: 30px; */
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 12px;
+    border-radius: 5px;
+}
+button {
+    font-size: 25px;
+    height: 55px;
+    width: 60px;
+    margin-top: 10px;
+    margin-left: 13px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgba(138, 138, 138, 0.651);
+    transition: ease 100ms all 100ms;
+    cursor: pointer;
+}
+.voltagedrop_main,li, a {
+    font-size: 30px;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 10px;
+}
+a {
+    background:rgb(235, 234, 231);
+    border-radius: 10px;
+    padding: 10px;
+    border-style: ridge;
+    border-width: 2px;
+    margin-left: -30px;
+    color: crimson;
+}
+
+a:hover{
+    background: rgba(216, 213, 213, 0.651);
+}
