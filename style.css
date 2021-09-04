@@ -14,6 +14,7 @@ body {
 }
 .calculator_body{
     display: block;
+    justify-content: center;
     height: 370px;
     width: 315px;
     border-style: groove;
