@@ -15,6 +15,7 @@ body {
 .calculator_body{
     display: block;
     height: 370px;
+    width: 315px;
     border-style: groove;
     border-width: 2px;
     border-radius: 10px;
