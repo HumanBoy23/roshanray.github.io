@@ -5,7 +5,7 @@ for(item of buttons){
     item.addEventListener('click', (e)=>{
         buttonText = e.target.innerText;
         console.log('Button Text is ', buttonText);
-        if(buttonText == '*'){
+        if(buttonText == 'x'){
             buttonText = '*';
             screenValue += buttonText;
             screen.value = screenValue;
