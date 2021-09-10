@@ -4,8 +4,13 @@ let screenValue = '';
 for(item of buttons){
     item.addEventListener('click', (e)=>{
         buttonText = e.target.innerText;
-        console.log('Button Text is ', buttonText);
-        if(buttonText == 'x'){
+       if(buttonText == 'x' && screen.value == ''){
+            screenValue = '0';
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+        if(buttonText == 'x' && screen.value != null){
             buttonText = '*';
             screenValue += buttonText;
             screen.value = screenValue;
@@ -15,6 +20,7 @@ for(item of buttons){
             screen.value = screenValue;
         }
         else if(buttonText == '='){
+           screenValue = '';
            screen.value = eval(screen.value);
         }
         else {
