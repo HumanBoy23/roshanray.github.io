@@ -7,7 +7,7 @@ for(item of buttons){
        if(buttonText == 'x' && screen.value == ''){
             screenValue = '0';
             buttonText = '*';
-            screenValue += buttonText;
+            screenValue == buttonText;
             screen.value = screenValue;
         }
         if(buttonText == 'x' && screen.value != null){
