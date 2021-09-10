@@ -20,7 +20,7 @@ body {
     border-style: groove;
     border-width: 2px;
     border-radius: 10px;
-    background-color: gb(148, 143, 143);
+    background-color: rgb(148, 143, 143);
 }
 #screen {
     text-align: right;
