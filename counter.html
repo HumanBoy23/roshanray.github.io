@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+</head>
+<head>
+    <title>Counter App</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            user-zoom: unset;
+            user-select: none;
+        }
+
+        body {
+            background: none;
+        }
+
+        main {
+            display:flex;
+            justify-content: center;
+            align-self: center;
+        }
+
+        .app_bg {
+            display: flex-end;
+            background: grey;
+            width: 600px;
+            height: 200px;
+        }
+
+        #screen {
+            text-align: center;
+            font-size: 150px;
+            max-width: 400px;
+            margin-top: 10px;
+            margin-bottom: 10%;
+            margin-left: 18%;
+            user-select: none;
+        }
+
+        .btn_add {
+            font-size: 100px;
+            margin-left: 25%;
+            margin-top: 40%;
+            user-select: none;
+        }
+        .btn_reset {
+            font-size: 100px;
+            margin-left: 25%;
+            margin-top: 40px;
+            user-select: none;
+        }
+        @media only screen and (max-width: 480px) {
+         #screen {
+            margin-left: 10px;
+         }
+         .app_bg {
+             max-width: 420px;
+             margin-top: 40px;
+         }
+         .btn_reset, .btn_add{
+             margin-left: 15%;
+         }
+        } 
+    </style>
+    <main>
+        <div class="app_bg">
+            <input id="screen" type="text" name="screen" placeholder="0" disabled>
+            <button class="btn_add">Count</button>
+            <button class="btn_reset">Reset</button>
+            </div>
+    </main>
+</body>
+<script>
+    let screen = document.getElementById("screen");
+    buttons = document.querySelectorAll("button");
+    let screenValue = "";
+    for (item of buttons) {
+        item.addEventListener('click', (e) => {
+            buttonText = e.target.innerText;
+            if (buttonText == "Count" && screenValue == "") {
+                screenValue = 1;
+                screen.value = screenValue;
+            }
+            else if (buttonText == "Reset") {
+                screenValue = "";
+                screen.value = screenValue;
+            }
+            else {
+                screenValue += 1;
+                screen.value = screenValue;
+            }
+        })
+    }
+</script>
+</html>
