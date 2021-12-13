@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_javascript</title>
+</head>
+<body>
+<style>
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family:Arial;
+}
+
+body {
+    user-select: none;
+    background-color: beige;
+    padding-left: 60px;
+}
+.main_header {
+    text-align: center;
+}
+.calculator_body{
+    justify-content: center;
+    height: 370px;
+    width: 315px;
+    border-style: groove;
+    border-width: 2px;
+    border-radius: 10px;
+    background-color: rgb(148, 143, 143);
+}
+#screen {
+    text-align: right;
+    font-size: 25px;
+    /* padding-right: 100px; */
+    margin-top: 15px;
+    /* padding-bottom: 30px; */
+    padding: 10px;
+    width: 280px;
+    margin-left: 15px;
+    margin-right: 12px;
+    border-radius: 5px;
+}
+button {
+    font-size: 25px;
+    height: 55px;
+    width: 60px;
+    margin-top: 13px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgba(228, 224, 224, 0.651);
+    transition: ease 100ms all 100ms;
+    cursor: pointer;
+}
+.other_apps, a, li {
+    display: inline-block;
+    justify-content: space-between;
+    font-size: 30px;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 20px;
+}
+a {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+a:hover{
+    background: rgba(216, 213, 213, 0.651);
+}
+
+@media only screen and (max-width: 480px) {
+    .calculator_body{
+        margin-left: 10px;
+    }
+    
+}
+</style>
+    <main>
+            <h1 class="main_header">Calculator</h1>
+            <div class="calculator_body">
+                <table>
+                    <input id="screen" name="screen" type="text" placeholder="0">
+                    <tr>
+                        <td><button>7</button></td>
+                        <td><button>8</button></td>
+                        <td><button>9</button></td>
+                        <td><button>/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>4</button></td>
+                        <td><button>5</button></td>
+                        <td><button>6</button></td>
+                        <td><button>x</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>1</button></td>
+                        <td><button>2</button></td>
+                        <td><button>3</button></td>
+                        <td><button>+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button>-</button></td>
+                        <td><button>0</button></td>
+                        <td><button>C</button></td>
+                        <td><button>=</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        </div>
+        <div class="other_apps"> 
+            <h3>Other Applications</h3>
+            <li><img src="/webp/vdrop.webp" alt=""><a href="voltagedrop.html" target="_blank">Voltage Drop Calculator </a></li>
+            <li><a href="resistor_color_code.html" target="_blank">Resistor Color Code</a></li>
+            <li><a href="counter.html" target="_blank">Counter App</a></li>
+        </div>
+    </main>
+</body>
+<script>
+let screen = document.getElementById('screen');
+buttons = document.querySelectorAll('button');
+let screenValue = '';
+for(item of buttons){
+    item.addEventListener('click', (e)=>{
+        buttonText = e.target.innerText;
+        if(buttonText == 'x' && screen.value == ''){
+            screenValue = '0';
+            buttonText = '*';
+            screenValue == buttonText;
+            screen.value = screenValue;
+        }
+        if(buttonText == 'x' && screen.value != ''){
+            buttonText = '*';
+            screenValue += buttonText;
+            screen.value = screenValue;
+        }
+        else if(buttonText == 'C'){
+            screenValue = '';
+            screen.value = screenValue;
+        }
+        else if(buttonText == '='){
+           screenValue = '';
+           if(screen.value == ''){
+               screen.value == ''
+           }
+           else {
+                screen.value = eval(screen.value);
+           }
+        }
+        else {
+            screenValue +=buttonText;
+            screen.value = screenValue;
+        }
+})
+}
+</script>
+<noscript>
+    <style>
+        .js_disabled_msg {
+            background-color: rgb(245, 180, 180);
+            font-size: 30px;
+        }
+    </style>
+    <div class="js_disabled_msg">
+        Enable javascript you scum!
+    </div>
+</noscript>
+</html>
