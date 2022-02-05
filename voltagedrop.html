@@ -12,8 +12,7 @@
     <main>
         <div class="container">
             <table>
-                <h4>Volts used by source: <input id="voltage_used" type="text" name="voltage_used" placeholder="0v"></h4>
-                <h4>Volts from power source: <input id="voltage_given" type="text" name="voltage_given" placeholder="0v"></h4>
+                <h4>Voltage: <input id="voltage" type="text" name="voltage" placeholder="0v"></h4>
                 <h4>Resistor: <input id="resistor" type="text" name="resistor" placeholder="0 ohms"></h4>
                 <h4>Current usage by circuit: <input id="current" type="text" name="current" placeholder="0amp"></h4>
                 <button class="calculate_btn">Calculate</button>
@@ -41,15 +40,14 @@ for (item of buttons) {
         console.log('Button Text is ', buttonText);
         if (buttonText == 'Reset') {
             screenValue = "";
-            voltage_used.value = screenValue;
-            voltage_given.value = screenValue;
+            voltage.value = screenValue;
             resistor.value = screenValue;
             result.value = screenValue;
             current.value = screenValue;
             voltage_through_resistor.value = screenValue;
         }
         else if (buttonText == 'Calculate') {
-            result.value =  voltage_given.value - voltage_used.value / current.value * 1000;
+            result.value =  voltage.value - (current.value / resistor.value);
             voltage_through_resistor.value = result.value;
         }
         else {
