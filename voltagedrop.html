@@ -49,7 +49,7 @@ for (item of buttons) {
             voltage_through_resistor.value = screenValue;
         }
         else if (buttonText == 'Calculate') {
-            result.value =  voltage_given - voltage_used / current.value * 1000;
+            result.value =  voltage_given.value - voltage_used.value / current.value * 1000;
             voltage_through_resistor.value = result.value;
         }
         else {
