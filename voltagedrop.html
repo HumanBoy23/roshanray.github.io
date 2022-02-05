@@ -48,7 +48,7 @@ for (item of buttons) {
         else if (buttonText == 'Calculate') {
             dot = current.value / resistor.value;
             result.value = voltage.value - dot;
-            voltage_through_resistor.value = voltage.value;
+            voltage_through_resistor.value = result.value;
         }
         else {
              console.log(" fail");
