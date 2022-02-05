@@ -47,8 +47,8 @@ for (item of buttons) {
             voltage_through_resistor.value = screenValue;
         }
         else if (buttonText == 'Calculate') {
-            result.value = voltage.value - current.value / resistor.value;
-            voltage_through_resistor.value = result.value;
+            result.value =  resitor.value / current.value - voltage.value;
+            voltage_through_resistor.value = voltage.value - result.value;
         }
         else {
              console.log(" fail");
