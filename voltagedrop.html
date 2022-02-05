@@ -47,11 +47,12 @@ for (item of buttons) {
             voltage_through_resistor.value = screenValue;
         }
         else if (buttonText == 'Calculate') {
-            result.value =  voltage.value - (current.value / resistor.value);
+            dot = current.value / resistor.value;
+            result.value =  voltage.value - dot;
             voltage_through_resistor.value = result.value;
         }
         else {
-            screenValue += buttonText;
+            screenValue = "";
             // result.value += buttonText;
         }
     })
