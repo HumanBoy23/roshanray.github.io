@@ -25,7 +25,8 @@
     </main>
 </body>
 <script>
-    let voltage = document.getElementById("voltage");
+    let voltage_used = document.getElementById("voltage_used");
+let voltage_given = document.getElementById("voltage_given");
 let resitor = document.getElementById("resistor");
 let result = document.getElementById("result");
 let current = document.getElementById("current");
@@ -40,15 +41,16 @@ for (item of buttons) {
         console.log('Button Text is ', buttonText);
         if (buttonText == 'Reset') {
             screenValue = "";
-            voltage.value = screenValue;
+            voltage_used.value = screenValue;
+            voltage_given.value = screenValue;
             resistor.value = screenValue;
             result.value = screenValue;
             current.value = screenValue;
             voltage_through_resistor.value = screenValue;
         }
         else if (buttonText == 'Calculate') {
-            result.value =  resitor.value * current.value / voltage.value;
-            voltage_through_resistor.value = voltage.value - result.value;
+            result.value =  voltage_given - voltage_used / current.value * 1000;
+            voltage_through_resistor.value = result.value;
         }
         else {
             screenValue += buttonText;
